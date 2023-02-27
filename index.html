@@ -1,82 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
-   
-    <title>weather-app</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
         <div class="weather-app">
-        <form id="search-form" class="search-form">
-            <div class="row">
-              <div class="col-9">
-                <input
-                id="city-input"
-                  type="search"
-                  placeholder="Type a city.."
-                  autofocus="on"
-                  autocomplete="off"
-                  class="form-control shadow-sm"
-                />
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
               </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm"
-                />
-              </div>
-              </div>
-              
-           
-      <h1 id="city">Madrid, Spain</h1>
-      
-      <ul>
-        <li id="date"></li>
-        <li id="description">partly cloudy</li>
-      </ul>
-      <div class="row">
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="cloudy icon"
-              />
-              <span id ="temperature"></span>
-              °C | <a href="#">°F</a>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+              </ul>
             </div>
           </div>
         </div>
-
-        <div class="col-6">
-
-        <ul>
-          
-          <li>Humidity: <span id="humidity"></li>
-          <li>Wind: <span id="wind"></li>
-        </ul>
+        <small>
+          <a
+            href="https://github.com/wecodeschool/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Matt Delac
+        </small>
       </div>
     </div>
-    
-
-   
-    <a href="//github.com/AVAS2222">Ewa S.</a>
-
-    <script src="src/index.js"></script>
-    
-
+    <script src="src/app.js"></script>
   </body>
 </html>
