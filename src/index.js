@@ -29,10 +29,9 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity + "%";
+  document.querySelector("#wind").innerHTML =
+    Math.round(response.data.wind.speed) + " km/h";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 }
@@ -112,4 +111,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 //let currentLocationButton = document.querySelector("#current-location-button");
 //currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Madrid");
+searchCity("Düsseldorf");

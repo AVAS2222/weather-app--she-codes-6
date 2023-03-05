@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
    
     <title>weather-app</title>
   </head>
@@ -41,7 +41,7 @@
               </div>
               
            
-      <h1 id="city">Madrid, Spain</h1>
+      <h1 id="city"></h1>
       
       <ul>
         <li id="date"></li>
@@ -56,7 +56,7 @@
                 alt="cloudy icon"
               />
               <span id ="temperature"></span>
-              °C | <a href="#">°F</a>
+              <a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a>
             </div>
           </div>
         </div>
@@ -65,12 +65,11 @@
 
         <ul>
           
-          <li>Humidity: <span id="humidity" ></li>
-          <li>Wind: <span id="wind" ></li>
+          <li>Humidity: <span id="humidity"></li>
+          <li>Wind: <span id="wind"></li>
         </ul>
       </div>
     </div>
-    
 
    
     <a href="//github.com/AVAS2222">Ewa S.</a>
