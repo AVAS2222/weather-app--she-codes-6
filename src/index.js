@@ -74,7 +74,10 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = " 4363383t278120bce8e3a14aco25af02";
